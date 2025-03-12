@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #fff;
+}
+
+/* Navigation */
+.header {
+    background: var(--gradient);
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav__menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.home__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+}
+
+.home__content {
+    max-width: 600px;
+}
+
+.home__content h2 span {
+    color: var(--primary-color);
+}
+
+/* Profile Image */
+.profile-img img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    border: 4px solid var(--primary-color);
+}
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 300px;  /* Adjust max-width to limit the size */
+    width: 100%;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;  /* Make the image take up the full width of its container */
+    height: auto;  /* Keep the image aspect ratio */
+    border-radius: 8px;  /* Rounded corners for images */
+    object-fit: cover;  /* Ensures images are well-cropped without stretching */
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align items to the left */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skill span {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);  /* Optional: Color for skill names */
+}
+
+.progress {
+    background: #ddd;  /* Light gray background */
+    border-radius: 5px;
+    height: 15px;  /* Height of the progress bar */
+    width: 100%;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Slight shadow for depth */
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;  /* Smooth transition */
+}
+
+/* Skill progress widths (adjust as per your proficiency) */
+.html { width: 90%; background: #f16529; }
+.css { width: 85%; background: #2965f1; }
+.javascript { width: 75%; background: #f7df1e; }
+.java { width: 80%; background: #5382a1; }
+.cpp { width: 70%; background: #00599C; }
+
+/* Resume Button */
+.resume-btn {
+    background: var(--gradient);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.resume-btn:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background: var(--gradient);  /* Same gradient as the header */
+    color: white;  /* White text for contrast */
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+

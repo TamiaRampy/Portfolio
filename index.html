@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamia Ramplin | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav">
+            <h1 class="logo">Tamia Ramplin</h1>
+            <ul class="nav__menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="home">
+        <div class="home__container">
+            <div class="home__content">
+                <h2>Hi, I'm Tamia Ramplin, <span class="typing-text"></span></h2>
+                <p>Aspiring Web Developer passionate about building innovative solutions & exploring emerging tech trends.</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+
+            <!-- Updated Profile Image (rectangular) -->
+            <div class="profile-img">
+                <img src="About.png" alt="Tamia Ramplin">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Always eager to learn, solve problems, and make a real impact in the tech world.</p>
+        <h3>Education</h3>
+        <ul>
+            <li>🎓 Tygerberg High School (2017-2021)</li>
+            <li>🎓 Richfield - Diploma in IT (2022 - 2024)</li>
+        </ul>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="progress">
+                    <div class="progress-bar html"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="progress">
+                    <div class="progress-bar css"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress">
+                    <div class="progress-bar javascript"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Java</span>
+                <div class="progress">
+                    <div class="progress-bar java"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+                <div class="progress">
+                    <div class="progress-bar cpp"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Resume Button -->
+        <a href="MyResume.pdf" class="resume-btn" download>📄 Download Resume</a>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- AI Chatbot Project -->
+            <div class="project-card">
+                <img src="Chatbot.png" alt="AI Chatbot Project">
+                <h3>AI Chatbot</h3>
+                <p>An AI-powered chatbot designed for interactive user engagement.</p>
+                <a href="https://landbot.online/v3/H-2753638-B4BQTGP0SRYMI2CO/index.html" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <!-- Digital Resource System Project -->
+            <div class="project-card">
+                <img src="Digital.png" alt="Digital Resource System">
+                <h3>Digital Resource System</h3>
+                <p>A digital platform to manage and distribute resources efficiently.</p>
+                <a href="" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:tamiaramplin21@gmail.com">tamiaramplin21@gmail.com</a></p>
+        <p>Phone: 0677378576</p>
+        <p><a href="https://github.com/TamiaRampy" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/tamia-ramplin-305382265/" target="_blank">LinkedIn</a></p>
+
+        <form id="contactForm" action="mailto:tamiaramplin21@gmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" onclick="showSuccessMessage(event)">Send Message</button>
+        </form>
+
+        <p id="successMessage" style="display:none; color: green;">Your message has been sent! I'll get back to you soon.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Tamia Ramplin. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
