@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Typing effect
     const typingText = document.querySelector(".typing-text");
-    const text = "Aspiring Web Developer";
+    const text = "Aspiring Software Developer";
     let index = 0;
 
     function typeText() {
