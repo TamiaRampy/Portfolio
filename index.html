@@ -29,7 +29,7 @@
         <div class="home__container">
             <div class="home__content">
                 <h2>Hi, I'm Tamia Ramplin, <span class="typing-text"></span></h2>
-                <p>Aspiring Web Developer passionate about building innovative solutions & exploring emerging tech trends.</p>
+                <p>Aspiring Software Developer passionate about building innovative solutions & exploring emerging tech trends.</p>
                 <a href="#contact" class="btn">Contact Me</a>
             </div>
 
@@ -43,7 +43,8 @@
     <!-- ABOUT SECTION -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Always eager to learn, solve problems, and make a real impact in the tech world.</p>
+        <p>Hi, I'm Tamia Ramplin, an aspiring Software developer passionate about building innovative solutions and exploring emerging tech trends. I'm always eager to learn, solve problems, and make a real impact in the tech world. My main focus is web development, but I’m also diving into areas like machine learning and AI.</p>
+        <p>Through my studies and personal projects, I have gained experience in technologies like HTML, CSS, JavaScript, and Java. I enjoy creating interactive and dynamic websites, and I’m always seeking new challenges to improve my skills.</p>
         <h3>Education</h3>
         <ul>
             <li>🎓 Tygerberg High School (2017-2021)</li>
@@ -108,7 +109,23 @@
                 <img src="Digital.png" alt="Digital Resource System">
                 <h3>Digital Resource System</h3>
                 <p>A digital platform to manage and distribute resources efficiently.</p>
-                <a href="" target="_blank" class="project-link">View Project</a>
+                <a href="https://xhantimbula.github.io/CodeCrussadersDigital/" target="_blank" class="project-link">View Project</a>
+            </div>
+           <!--  Todo app   -->
+            <div class="project-card">
+                <img src="todo-list.PNG" alt="todo-list-app">
+                <h3>Todo list app</h3>
+                <p> A simple web app for managing tasks, allowing users to add, edit, remove, and mark tasks as complete. It also features a theme switcher for light and dark modes.</p>
+                <a href="https://tamiarampy.github.io/todo-list-app/" target="_blank" class="project-link">View Project</a>
+
+            </div>
+
+            <div class="project-card">
+                <img src="weather-app.PNG" alt="weather-app">
+                <h3>Weather-app</h3>
+                <p> A simple web app for managing tasks, allowing users to add, edit, remove, and mark tasks as complete. It also features a theme switcher for light and dark modes.</p>
+                <a href="https://tamiarampy.github.io/weather-app/" target="_blank" class="project-link">View Project</a>
+
             </div>
         </div>
     </section>
@@ -118,23 +135,52 @@
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:tamiaramplin21@gmail.com">tamiaramplin21@gmail.com</a></p>
         <p>Phone: 0677378576</p>
-        <p><a href="https://github.com/TamiaRampy" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/tamia-ramplin-305382265/" target="_blank">LinkedIn</a></p>
-
-        <form id="contactForm" action="mailto:tamiaramplin21@gmail.com" method="post" enctype="text/plain">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" onclick="showSuccessMessage(event)">Send Message</button>
+        <p>
+            <a href="https://github.com/TamiaRampy" target="_blank">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/tamia-ramplin-305382265/" target="_blank">LinkedIn</a>
+        </p>
+    
+        <form id="contactForm" action="https://formspree.io/f/xldjevzb" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
-
+        
+    
         <p id="successMessage" style="display:none; color: green;">Your message has been sent! I'll get back to you soon.</p>
     </section>
+    
 
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2024 Tamia Ramplin. All rights reserved.</p>
     </footer>
-
+    <script type="module" src="js/index.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const form = this;
+            const successMessage = document.getElementById("successMessage");
+      
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    successMessage.style.display = "block"; // Show success message
+                    form.reset(); // Clear the form
+                    setTimeout(() => { successMessage.style.display = "none"; }, 5000); // Hide after 5 sec
+                } else {
+                    alert("Oops! Something went wrong. ❌");
+                }
+            }).catch(error => {
+                alert("Error: " + error.message);
+            });
+        });
+      </script>
+      
 </body>
 </html>
 

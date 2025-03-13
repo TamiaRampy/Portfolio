@@ -36,3 +36,30 @@ function showSuccessMessage(event) {
     }, 5000);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents default form submission
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        })
+        .then(response => {
+            if (response.ok) {
+                successMessage.style.display = "block";
+                form.reset(); // Clear form fields after submission
+            } else {
+                alert("Oops! Something went wrong.");
+            }
+        })
+        .catch(error => alert("Error: " + error));
+    });
+});
+
+
+
